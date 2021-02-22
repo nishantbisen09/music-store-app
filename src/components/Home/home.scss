@@ -1,0 +1,133 @@
+$font-color: #606060;
+$font-size: 40px;
+$content-font-color: #696969;
+
+.main-wrapper {
+	padding: 1% 10% 5% 10%;
+	text-align: center;
+	color: #696969;
+}
+
+.header-content {
+	font-weight: lighter;
+	span {
+		font-size: $font-size;
+	}
+}
+
+.album-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+}
+
+.album {
+	color: $font-color;
+	text-align: center;
+	font-size: $font-size - 25;
+	margin: 1%;
+	img {
+		border-radius: 2px;
+		height: 70%;
+		width: 80%;
+	}
+}
+
+.cart {
+	color: black;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.features {
+	border-bottom: 0.1px solid $content-font-color;
+	padding: 1% 10% 5% 10%;
+	text-align: center;
+	span {
+		font-size: $font-size;
+	}
+	.feature-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		.feature {
+			width: 30%;
+			display: flex;
+			flex-wrap: wrap;
+			text-align: left;
+			justify-content: space-between;
+			.feature-content {
+				flex-basis: 75%;
+				img {
+					height: 55px;
+					width: 55px;
+					margin: 10px;
+					opacity: 0.8;
+				}
+				span {
+					font-size: $font-size - 20;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1120px) {
+	.album-wrapper {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 900px) {
+	.album-wrapper {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 700px) {
+	.album-wrapper {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 500px) {
+	.features {
+		.feature-wrapper {
+			flex-direction: column;
+			align-items: center;
+			.feature {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 468px) {
+	.album-wrapper {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.header-content {
+		p {
+			text-align: justify;
+		}
+	}
+}
+
+//temp
+.cross {
+	position: relative;
+	display: inline-block;
+}
+
+.cross::after {
+	content: "";
+	width: 100%;
+	position: absolute;
+	right: -3px;
+	top: 50%;
+	background: white;
+}
+.cross::after {
+	border-top: 1px solid white;
+	transform: skewY(30deg);
+}

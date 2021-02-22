@@ -1,0 +1,10 @@
+export const SET_ALBUMS = "set_albums";
+export const ADD_ALBUM_TO_CART = "add_album_to_cart";
+export const REMOVE_ALBUM_FROM_CART = "remove_album_from_cart";
+export const SET_QUANTITY = "set_quantity";
+export const CART_TOTAL = "cart_total";
+export const ALBUM_PRICE = 300;
+export const LESS_ALBUMS = "less_albums";
+export const DEFAULT = "default";
+export const CART_CROSS = "fa fa-shopping-cart cart cross";
+export const CART_PLUS = "fa fa-cart-plus cart";
